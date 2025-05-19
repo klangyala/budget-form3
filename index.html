@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ติดตามการบริหารจัดการงบประมาณ</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #fdf6f0;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #7c4dff;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    button {
+      background-color: #a5d6a7;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #81c784;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ติดตามการบริหารจัดการงบประมาณ</h1>
+    <form id="budgetForm" action="https://docs.google.com/forms/d/e/1FAIpQLSedpnjeZXF0eQOBHwRe49GSgAI9F1HlA2Qpr8UhoE2Ci4CfxQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+      <label>รหัสหน่วยเบิกจ่าย</label>
+      <input type="number" name="entry.770891935" required />
+
+      <label>หน่วยงาน</label>
+      <input type="text" name="entry.1756678986" required />
+
+      <label>งบลงทุนที่ได้รับรับจัดสรรทั้งหมด ล้านบาท</label>
+      <input type="text" name="entry.1120700900" required />
+
+      <label>ประเภทงบประมาณรายจ่ายงบลงทุนที่ได้รับจัดสรร</label>
+      <select name="entry.132724430" required>
+        <option value="งานก่อสร้าง">งานก่อสร้าง</option>
+        <option value="ครุภัณฑ์">ครุภัณฑ์</option>
+        <option value="งานก่อสร้างและครุภัณฑ์">งานก่อสร้างและครุภัณฑ์</option>
+      </select>
+
+      <label>จำนวนโครงการงานก่อสร้าง</label>
+      <input type="number" name="entry.959568128" required />
+
+      <label>วงเงินรวมโครงการงานก่อสร้าง ล้านบาท</label>
+      <input type="text" name="entry.1002231984" required />
+
+      <label>จำนวนโครงการงานก่อสร้างที่รอลงนามหรือลงนามในสัญญาแล้ว</label>
+      <input type="number" name="entry.1806793761" required />
+
+      <label>วงเงินรวมโครงการงานก่อสร้างที่รอลงนามหรือลงนามในสัญญาแล้ว ล้านบาท</label>
+      <input type="text" name="entry.116090139" required />
+
+      <label>วงเงินเหลือจ่ายโครงการงานก่อสร้างที่ก่อหนี้ผูกพันแล้ว ล้านบาท</label>
+      <input type="text" name="entry.1948426166" required />
+
+      <label>จำนวนโครงการจัดหาครุภัณฑ์</label>
+      <input type="number" name="entry.1312325735" required />
+
+      <label>วงเงินรวมโครงการจัดหาครุภัณฑ์ ล้านบาท</label>
+      <input type="number" name="entry.273585115" required />
+
+      <label>จำนวนโครงการจัดหาครุภัณฑ์ที่รอลงนามหรือลงนามในสัญญาแล้ว</label>
+      <input type="number" name="entry.1412002722" required />
+
+      <label>วงเงินรวมโครงการจัดหาครุภัณฑ์ที่รอลงนามหรือลงนามในสัญญาแล้ว ล้านบาท</label>
+      <input type="text" name="entry.125218028" required />
+
+      <label>วงเงินเหลือจ่ายโครงการจัดหาครุภัณฑ์ที่ก่อหนี้ผูกพันแล้ว ล้านบาท</label>
+      <input type="text" name="entry.1087437826" required />
+
+      <button type="submit">ส่งข้อมูล</button>
+    </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { window.location.reload(); }"></iframe>
+  </div>
+
+  <script>
+    let submitted = false;
+  </script>
+</body>
+</html>
